@@ -1,0 +1,1121 @@
+/*!
+Theme Name: Swim Wakefield
+Theme URI: http://www.swimwakefield.com/
+Author: Tiger Stripe Media
+Author URI: http://www.tigerstripemedia.co.uk/
+Description: City of Wakefield Swimming Club website theme.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: swim-wakefield
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Swim Wakefield is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Navigation
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+# Theme Specific Styles
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+	/* Make sure select elements fit in widgets. */
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+	/* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+## Theme Specific Styles
+--------------------------------------------------------------*/
+
+/*
+
+Blue: #25266B
+
+Dark Blue: #1D2056
+
+Navbar Link: rgba(255,255,255,.5)
+
+Navbar Hover: rgb(204, 206, 207) #CCCECF
+
+Light Grey: #f2f2f2
+
+*/
+
+/* ==== GLOBAL ==== */
+
+.page-standard {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.logged-in .fixed-top {
+	top: 32px;
+}
+
+.hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#page-header {
+  margin-top: 56px;
+  padding: 30px 0;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+#page-header h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#page-section {
+  padding: 30px 0 0 0;
+}
+
+#page-section h2 {
+  font-weight: bold;
+}
+
+.standard-page-content {
+  padding: 20px 0;
+}
+
+.web-form {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  padding: 15px;
+  text-align: left;
+}
+
+.web-profile {
+  text-align: center;
+}
+
+/* 404 PAGE */
+
+.error-page {
+  padding: 150px 0 50px 0;
+  text-align: center;
+}
+
+.error-message {
+  font-weight: bold;
+  color: #8e8e8e;
+}
+
+.error-num {
+  font-weight: bold;
+  font-size: 180px;
+  color: #cccccc;
+}
+
+.error-text {
+  color: #8e8e8e;
+}
+
+.btn-error-page {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* ==== NAVBAR ==== */
+
+nav {
+  background-color: #1D2056;
+}
+
+.navbar-badge {
+  background-color: #25266B;
+  /* border: 1px solid rgba(255, 255, 255, 0.2); */
+  height: 120px;
+  width: 126.02px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: absolute;
+  top: 0;
+  border-radius: 0 0 15px 15px;
+  text-align: center;
+}
+
+.navbar-badge img {
+  height: 100px;
+  margin-top: 10px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255,255,255,.8);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+
+.dropdown-menu {
+  margin-top: 7px;
+  background-color: #1D2056;
+  border-radius: 0 0 .25rem .25rem;
+}
+
+.dropdown-item {
+  color: rgba(255,255,255,.6);
+}
+
+.dropdown-item:hover {
+  background-color: inherit;
+  color: #fff;
+}
+
+/* ==== BANNER ==== */
+
+#banner {
+  /* margin-top: 50px; */
+  padding: 0;
+}
+
+.banner-image {
+  object-fit: cover;
+}
+
+.carousel-item h1 {
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-item h4 {
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption a {
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+.carousel-caption a:hover {
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
+  color: #f2f2f2;
+}
+
+/* ==== WELCOME ==== */
+
+#welcome {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.welcome-hr {
+  width: 80%;
+}
+
+/* ===== ENTRIES PAGE ===== */
+
+#events {
+  padding: 30px 0;
+}
+
+#events .card-header {
+  color: #fff;
+  background-color: #1D2056;
+}
+
+#events .card {
+  margin-top: 20px;
+  transition: all .2s ease-in-out;
+}
+
+#events .card:hover {
+  transform: scale(1.05);
+}
+
+#entries {
+  padding: 30px 0;
+}
+
+/* ==== CALENDAR ==== */
+
+.calendar-page {
+  padding: 20px 0 0 0;
+}
+
+.datepicker.dropdown-menu {
+  z-index: 2000!important;
+}
+
+#tribe-events-content {
+  margin-bottom: 0!important;
+}
+
+/* ==== SQUADS PAGE ==== */
+
+#session-times {
+  padding: 30px 0;
+}
+
+.a-squad {
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  background-color: red;
+  border-radius: 100px;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.jb-squad {
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  background-color: blue;
+  border-radius: 100px;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.ib-squad {
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  background-color: green;
+  border-radius: 100px;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.c-squad {
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  background-color: hotpink;
+  border-radius: 100px;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.squad-img {
+  height: 180px;
+  width: 180px;
+  margin-top: 10px;
+}
+
+#session-times table {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+#training-pools {
+  padding: 15px 0;
+}
+
+.pool {
+  margin: 20px 0;
+}
+
+.pool h4 {
+  padding-bottom: 20px;
+}
+
+.google-maps {
+  position: relative;
+  padding-bottom: 70%; // This is the aspect ratio
+  height: 0;
+  overflow: hidden;
+}
+
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* ==== LEAGUES AND TEAMS ==== */
+
+#leagues-teams {
+  padding: 30px 0;
+}
+
+#league-tables {
+  padding: 0 0 30px 0;
+}
+
+/* ==== COACHING STAFF PAGE ==== */
+
+#coaching-staff {
+  padding: 30px 0;
+}
+
+#coaching-staff .row {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+#coaching-staff .row > div[class*='col-'] {
+  display: flex;
+}
+
+.coaching-profile {
+  margin: 20px 0;
+  transition: all .2s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+}
+
+.coaching-profile:hover {
+  transform: scale(1.05);
+}
+
+.coaching-profile .card-body {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+/* ==== COMMITTEE MEMBERS PAGE ==== */
+
+#committee-profiles {
+  padding: 30px 0;
+}
+
+#committee-profiles .row {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+#committee-profiles .row > div[class*='col-'] {
+  display: flex;
+}
+
+.committee-profile {
+  margin: 20px 0;
+  transition: all .2s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+}
+
+.committee-profile:hover {
+  transform: scale(1.05);
+}
+
+.committee-profile .card-body {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+/* ==== MEMBER DASHBOARD ==== */
+
+.entry-header {
+  display: none!important;
+}
+
+.password-page {
+  padding: 80px 0;
+}
+
+.password-login-form {
+  text-align: center;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.password-login-form-content {
+  width: 400px;
+  margin: 0 auto;
+  padding-top: 116.5px;
+}
+
+.password-login-form form {
+  margin: 0 auto;
+  width: 270px;
+  padding-top: 20px;
+}
+
+.post-password-required footer.entry-footer {
+  display: none!important;
+}
+
+.post-30 .page .type-page .status-publish .post-password-required .hentry {
+  padding: 100px 200px!important;
+}
+
+.member-dash-icon {
+  padding-bottom: 20px;
+  color: #25266B;
+}
+
+#members-dashboard {
+  padding: 30px 0 5px 0;
+}
+
+.bg-facebook {
+  background-color: #3B5998!important;
+}
+
+.facebook-group {
+  transition: all .2s ease-in-out;
+}
+
+.facebook-group:hover {
+  transform: scale(1.05);
+}
+
+#dashboard-menu {
+  padding: 15px 0 45px 0;
+}
+
+.dash-menu-link {
+  text-decoration: none;
+}
+
+.dash-menu-link:hover {
+  text-decoration: none;
+}
+
+.dash-menu-item {
+  width: 220px;
+  padding: 30px 0;
+  border-radius: 10px;
+  text-align: center;
+  margin: auto;
+  color: #fff;
+  margin-top: 30px;
+  transition: all .2s ease-in-out;
+}
+
+.dash-menu-item:hover {
+  transform: scale(1.05);
+}
+
+.dash-menu-item h3 {
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+/* ==== MEMBERS ==== */
+
+#member-select {
+  padding: 50px 0;
+}
+
+#member-select h2 {
+  margin-bottom: 30px;
+}
+
+.member-choice-link {
+  text-decoration: none;
+}
+
+.member-choice-link:hover {
+  text-decoration: none;
+}
+
+.member-choice {
+  width: 300px;
+  padding: 35px 0;
+  border-radius: 10px;
+  text-align: center;
+  margin: auto;
+  color: #fff;
+  margin-top: 30px;
+  transition: all .2s ease-in-out;
+}
+
+.member-choice:hover {
+  transform: scale(1.05);
+}
+
+.member-choice h3 {
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+#member-profiles {
+  padding: 30px 0;
+}
+
+#member-profiles .row {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+#member-profiles .row > div[class*='col-'] {
+  display: flex;
+}
+
+.member-profile {
+  margin: 20px 0;
+  transition: all .2s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+}
+
+.member-profile:hover {
+  transform: scale(1.05);
+}
+
+.member-profile .card-body {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.member-profile .card-footer {
+  bottom: 0;
+}
+
+/* ==== CLUB SHOP ==== */
+
+#club-shop {
+  padding: 40px 0 20px 0;
+  text-align: center;
+}
+
+.shop-item {
+  margin-top: 20px;
+}
+
+.shop-item-img {
+  width: 250px;
+  margin: auto;
+  display: block;
+}
+
+#order-items {
+  padding: 20px 0 50px 0;
+}
+
+/* ==== MEMBER CONTACT ==== */
+
+#contact-club {
+  padding: 30px 0;
+  text-align: center;
+}
+
+#contact-club .btn-link {
+  color: #fff;
+}
+
+#contact-club .btn-link:hover {
+  text-decoration: none!important;
+  color: #fff;
+}
+
+#contact-club .btn-link:focus {
+  text-decoration: none!important;
+  color: #fff;
+}
+
+.contact-club-link {
+  cursor: pointer;
+}
+
+.question-card:nth-of-type(odd) {
+  background-color: #007bff!important;
+}
+
+.question-card:nth-of-type(even) {
+  background-color: #0d73e0!important;
+}
+
+/* ==== CONTACT ==== */
+
+#contact {
+  padding: 50px 0;
+  text-align: center;
+}
+
+/* ==== ACCREDITATIONS ==== */
+
+#accreditations {
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.acceditation-wrapper {
+  padding: 30px 0;
+}
+
+.swim-mark {
+  height: 40px;
+  background: url('/wp-content/themes/swim-wakefield/assets/img/swim-mark-grey.png') center no-repeat;
+  background-size: contain;
+  transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease-out;
+  -moz-transition: background 0.3s ease-out;
+  -o-transition: background 0.3s ease-out;
+}
+
+.swim-mark:hover {
+  height: 40px;
+  background: url('/wp-content/themes/swim-wakefield/assets/img/swim-mark-colour.png') center no-repeat;
+  background-size: contain;
+}
+
+.swim-england {
+  height: 50px;
+  background: url('/wp-content/themes/swim-wakefield/assets/img/swim-england-grey.png') center no-repeat;
+  background-size: contain;
+  transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease-out;
+  -moz-transition: background 0.3s ease-out;
+  -o-transition: background 0.3s ease-out;
+}
+
+.swim-england:hover {
+  height: 50px;
+  background: url('/wp-content/themes/swim-wakefield/assets/img/swim-england-colour.png') center no-repeat;
+  background-size: contain;
+}
+
+.club-mark {
+  height: 45px;
+  background: url('/wp-content/themes/swim-wakefield/assets/img/club-mark-grey.png') center no-repeat;
+  background-size: contain;
+  transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease-out;
+  -moz-transition: background 0.3s ease-out;
+  -o-transition: background 0.3s ease-out;
+}
+
+.club-mark:hover {
+  height: 45px;
+  background: url('/wp-content/themes/swim-wakefield/assets/img/club-mark-colour.png') center no-repeat;
+  background-size: contain;
+}
+
+/* ==== FOOTER ==== */
+
+#site-footer {
+  background-color: #25266B;
+  padding-top: 30px;
+}
+
+.footer-title {
+  color: rgb(204, 206, 207);
+}
+
+.footer-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-menu a {
+  color: rgba(255,255,255,.6);
+}
+
+.footer-menu a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.copyright {
+  text-align: center;
+  padding: 5px 0 10px 0;
+  color: rgba(255,255,255,.5);
+}
+
+.copyright a {
+  color: rgba(255,255,255,.5);
+}
+
+.copyright a:hover {
+  text-decoration: none;
+  color: rgb(204, 206, 207);
+}
+
+
+@media screen and (max-width: 991px) {
+  .navbar-nav {
+    padding-top: 40px;
+  }
+
+  #page-header {
+    padding-top: 90px;
+  }
+
+  .web-profile .card {
+    margin: 30px 100px 0 100px;
+  }
+
+  .web-form {
+    margin: 20px 40px 0 40px;
+  }
+}
+
+/* Fix the top margin when logged in */
+@media screen and (max-width: 782px) {
+  .logged-in .fixed-top {
+  	top: 46px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .logged-in .fixed-top {
+  	top: 42px;
+  }
+  #wpadminbar {
+  	position: fixed!important;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .web-profile .card {
+    margin: 30px 0 0 0;
+  }
+
+  .web-form {
+    margin: 20px 0 0 0;
+  }
+}
