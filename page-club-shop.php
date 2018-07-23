@@ -4,9 +4,10 @@
 */ 
 
 // Custom Fields
-$committee_member_image  = get_field('committee_member_image');
-$committee_member_name  = get_field('committee_member_name');
-$committee_member_info  = get_field('committee_member_info');
+$committee_image  = get_field('committee_image');
+$committee_name  = get_field('committee_name');
+$committee_role  = get_field('committee_role');
+$committee_info  = get_field('committee_info');
 
 get_header();
 ?>
@@ -30,41 +31,27 @@ get_header();
       <div class="container">
           <div class="row">
               
-              <div class="col-xl-3 col-md-6 shop-item">
-                  <img class="shop-item-img" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/polo.png"></img>
-                  <br>
-                  <h4>Polo Shirt</h4>
-                  <hr class="hr">
-                  <h6 class="text-muted">£6.00</h6>
-                  <p>Size’s Child/Small/Medium/Large. Any name can be added for an additional £2.</p>
-              </div>
+              <?php $loop = new WP_Query( array( 'post_type' => 'club_shop', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
+              
+              <?php while( $loop->have_posts() ) : $loop->the_post(); ?>
+              
+              <?php
+              $item_image  = get_field('item_image');
+              $item_title  = get_field('item_title');
+              $item_price  = get_field('item_price');
+              $item_description  = get_field('item_description');
+              ?>
               
               <div class="col-xl-3 col-md-6 shop-item">
-                  <img class="shop-item-img" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/hoodie.png"></img>
+                  <img class="shop-item-img" src="<?php echo $item_image; ?>" alt="<?php echo $item_image['alt']; ?>"></img>
                   <br>
-                  <h4>Hoodie</h4>
+                  <h4><?php echo $item_title; ?></h4>
                   <hr class="hr">
-                  <h6 class="text-muted">Child Size £20 | Adult Size £25 </h6>
-                  <p>Size's Small/Medium/Large. Name included in the price.</p>
+                  <h6 class="text-muted"><?php echo $item_price; ?></h6>
+                  <p><?php echo $item_description; ?></p>
               </div>
               
-              <div class="col-xl-3 col-md-6 shop-item">
-                  <img class="shop-item-img" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/hats.png"></img>
-                  <br>
-                  <h4>Swim Caps</h4>
-                  <hr class="hr">
-                  <h6 class="text-muted">£4.00</h6>
-                  <p>Available in Blue or White. Can add a name please ask Neil for details.</p>
-              </div>
-              
-              <div class="col-xl-3 col-md-6 shop-item">
-                  <img class="shop-item-img" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/polo.png"></img>
-                  <br>
-                  <h4>T-Bag Poolside T-shirt</h4>
-                  <hr class="hr">
-                  <h6 class="text-muted">£6.00</h6>
-                  <p>A quick drying T-Shirt for use directly after racing.</p>
-              </div>
+              <?php endwhile; ?>
               
           </div>
       </div>
@@ -112,10 +99,11 @@ get_header();
         </div>
         <div class="col-xl-4 col-lg-5 col-md-12 web-profile">
           <div class="card">
-            <img class="card-img-top" src="<?php echo $committee_member_image; ?>" alt="<?php echo $committee_member_image['alt']; ?>">
+            <img class="card-img-top" src="<?php echo $committee_image; ?>" alt="<?php echo $committee_image['alt']; ?>">
             <div class="card-body">
-              <h5 class="card-title"><?php echo $committee_member_name; ?></h5>
-              <p class="card-text"><?php echo $committee_member_info; ?></p>
+              <h5 class="card-title"><?php echo $committee_name; ?></h5>
+              <h6 class="card-text text-muted"><?php echo $committee_role; ?></h6>
+              <p class="card-text"><?php echo $committee_info; ?></p>
             </div>
           </div>
         </div>
