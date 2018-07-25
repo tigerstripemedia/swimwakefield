@@ -23,7 +23,7 @@ get_header();
 
 <section id="league-tables">
     <div class="container">
-        <?php $loop = new WP_Query( array( 'post_type' => 'leagues_teams', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
+        <?php $loop = new WP_Query( array( 'post_type' => 'leagues_teams', 'orderby' => 'post_id', 'order' => 'ASC', 'posts_per_page' => -1 ) ); ?>
         
         <?php while( $loop->have_posts() ) : $loop->the_post(); ?>
           

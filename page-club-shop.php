@@ -31,7 +31,7 @@ get_header();
       <div class="container">
           <div class="row">
               
-              <?php $loop = new WP_Query( array( 'post_type' => 'club_shop', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
+              <?php $loop = new WP_Query( array( 'post_type' => 'club_shop', 'orderby' => 'post_id', 'order' => 'ASC', 'posts_per_page' => -1 ) ); ?>
               
               <?php while( $loop->have_posts() ) : $loop->the_post(); ?>
               

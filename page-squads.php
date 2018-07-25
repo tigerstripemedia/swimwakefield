@@ -21,7 +21,7 @@ get_header();
     <hr class="hr">
     <div class="row">
       
-      <?php $loop = new WP_Query( array( 'post_type' => 'training_session', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
+      <?php $loop = new WP_Query( array( 'post_type' => 'training_session', 'orderby' => 'post_id', 'order' => 'ASC', 'posts_per_page' => -1 ) ); ?>
       
       <div class="col-lg-3 col-md-12 squad-icon">
         <div class="a-squad">

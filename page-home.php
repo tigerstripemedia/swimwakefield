@@ -15,7 +15,7 @@ get_header();
     <section id="banner">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         
-        <?php $loop = new WP_Query( array( 'post_type' => 'home_slide', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
+        <?php $loop = new WP_Query( array( 'post_type' => 'home_slide', 'orderby' => 'post_id', 'order' => 'ASC', 'posts_per_page' => -1 ) ); ?>
         
         <div class="carousel-inner">
           
