@@ -477,6 +477,10 @@ nav {
   background-color: #1D2056;
 }
 
+nav.tribe-events-nav-pagination {
+  background-color: transparent;
+}
+
 .navbar-badge {
   background-color: #25266B;
   /* border: 1px solid rgba(255, 255, 255, 0.2); */
