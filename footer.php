@@ -23,8 +23,8 @@
         </a>
       </div>
       <div class="col-md-4 acceditation-wrapper">
-        <a target="_blank" href="#">
-          <div class="https://www.swimming.org/swimengland/">
+        <a target="_blank" href="https://www.swimming.org/swimengland/">
+          <div class="swim-england">
             
           </div>
         </a>
