@@ -77,7 +77,7 @@ get_header();
     <h2>Enter an Event</h2>
     <hr class="hr">
     <div class="row">
-      <div class="col-xl-8 col-lg-7 col-md-12">
+      <div class="col-xl-9 col-lg-8 col-md-12">
         <form class="web-form">
             
           <div class="form-group">
@@ -120,7 +120,7 @@ get_header();
           <small class="text-muted">The information you provide will be used solely for correspondence and will be stored securely on a password protected server and device. We will not share your information with any other party. This information will be securely disposed once we no longer need to contact you or upon your request.</small>
         </form>
       </div>
-      <div class="col-xl-4 col-lg-5 col-md-12 web-profile">
+      <div class="col-xl-3 col-lg-4 col-md-12 web-profile">
         <div class="card">
           <img class="card-img-top" src="<?php echo $committee_image; ?>" alt="<?php echo $committee_image['alt']; ?>">
           <div class="card-body">

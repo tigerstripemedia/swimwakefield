@@ -16,7 +16,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4 acceditation-wrapper">
-        <a target="_blank" href="http://www.swimming.org/swimengland/swimmark-accreditation-for-clubs/">
+        <a target="_blank" href="https://www.swimming.org/swimengland/swimmark-accreditation-for-clubs/">
           <div class="swim-mark">
             
           </div>
@@ -24,13 +24,13 @@
       </div>
       <div class="col-md-4 acceditation-wrapper">
         <a target="_blank" href="#">
-          <div class="swim-england">
+          <div class="https://www.swimming.org/swimengland/">
             
           </div>
         </a>
       </div>
       <div class="col-md-4 acceditation-wrapper">
-        <a target="_blank" href="#">
+        <a target="_blank" href="https://www.sportenglandclubmatters.com/club-mark/">
           <div class="club-mark">
             
           </div>
