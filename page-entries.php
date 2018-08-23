@@ -14,6 +14,8 @@ $committee_name_2  = get_field('committee_name_2');
 $committee_role_2  = get_field('committee_role_2');
 $committee_info_2  = get_field('committee_info_2');
 
+$entries_form = get_field('entries_form');
+
 get_header();
 ?>
 
@@ -78,47 +80,51 @@ get_header();
     <hr class="hr">
     <div class="row">
       <div class="col-xl-9 col-lg-8 col-md-12">
-        <form class="web-form">
+        
+        <?php echo $entries_form; ?>
+        
+        <!--<form class="web-form">-->
             
-          <div class="form-group">
-            <label for="event-title">Event Title</label>
-            <input type="text" class="form-control" id="event-title" placeholder="Event">
-          </div>
+        <!--  <div class="form-group">-->
+        <!--  <label for="event-title">Event Title</label>-->
+        <!--  <input type="text" class="form-control" id="event-title" placeholder="Event">-->
+        <!--  </div>-->
           
-          <div class="form-group">
-            <label for="event-date">Event Date</label>
-            <input type="text" class="form-control" id="event-date" placeholder="Date">
-          </div>
+        <!--  <div class="form-group">-->
+        <!--  <label for="event-date">Event Date</label>-->
+        <!--  <input type="text" class="form-control" id="event-date" placeholder="Date">-->
+        <!--  </div>-->
           
-          <div class="form-group">
-            <label for="swimmer-name">Swimmer's Name</label>
-            <input type="text" class="form-control" id="swimmer-name" placeholder="Name">
-          </div>
+        <!--  <div class="form-group">-->
+        <!--  <label for="swimmer-name">Swimmer's Name</label>-->
+        <!--  <input type="text" class="form-control" id="swimmer-name" placeholder="Name">-->
+        <!--  </div>-->
           
-          <div class="form-group">
-            <label for="swimmer-dob">Swimmer's Date of Birth</label>
-            <input type="date" class="form-control" id="swimmer-dob">
-          </div>
+        <!--  <div class="form-group">-->
+        <!--  <label for="swimmer-dob">Swimmer's Date of Birth</label>-->
+        <!--  <input type="date" class="form-control" id="swimmer-dob">-->
+        <!--  </div>-->
           
-          <div class="form-group">
-            <label for="email">Contact Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Email">
-          </div>
+        <!--  <div class="form-group">-->
+        <!--  <label for="email">Contact Email</label>-->
+        <!--  <input type="email" class="form-control" id="email" placeholder="Email">-->
+        <!--  </div>-->
           
-          <div class="form-group">
-            <label for="event-stroke">Individual Event(s), Stroke(s) & Distance(s)</label>
-            <br>
-            <small class="text-muted">
-                Please list the events you wish to enter seperated by commas. 
-                Enter the event's number followed by which stroke and distance 
-                you would like to swim (as shown below).
-            </small>
-            <textarea class="form-control" id="event-stroke" rows="3" placeholder="Event Number - Stroke/Distance, ..."></textarea>          
-          </div>
+        <!--  <div class="form-group">-->
+        <!--  <label for="event-stroke">Individual Event(s), Stroke(s) & Distance(s)</label>-->
+        <!--  <br>-->
+        <!--  <small class="text-muted">-->
+        <!--  Please list the events you wish to enter seperated by commas. -->
+        <!--  Enter the event's number followed by which stroke and distance -->
+        <!--  you would like to swim (as shown below).-->
+        <!--  </small>-->
+        <!--  <textarea class="form-control" id="event-stroke" rows="3" placeholder="Event Number - Stroke/Distance, ..."></textarea>          -->
+        <!--  </div>-->
           
-          <button type="submit" class="btn btn-primary btn-block entries-form-btn">Submit</button>
-          <small class="text-muted">The information you provide will be used solely for correspondence and will be stored securely on a password protected server and device. We will not share your information with any other party. This information will be securely disposed once we no longer need to contact you or upon your request.</small>
-        </form>
+        <!--  <button type="submit" class="btn btn-primary btn-block entries-form-btn">Submit</button>-->
+        <!--  <small class="text-muted">The information you provide will be used solely for correspondence and will be stored securely on a password protected server and device. We will not share your information with any other party. This information will be securely disposed once we no longer need to contact you or upon your request.</small>-->
+        <!--</form>-->
+        
       </div>
       <div class="col-xl-3 col-lg-4 col-md-12 web-profile">
         <div class="card">
