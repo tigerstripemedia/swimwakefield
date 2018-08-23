@@ -3,6 +3,11 @@
     Template Name: Member Dashboard Page
 */ 
 
+// Custom Fields
+$dashboard_title  = get_field('dashboard_title');
+$dashboard_description  = get_field('dashboard_description');
+
+
 get_header();
 ?>
 
@@ -25,17 +30,17 @@ get_header();
     <div class="container">
       <div class="row">
         <div class="col-md-8">
-          <h3>Welcome to the Members Dashboard!</h3>
+          <h3><?php echo $dashboard_title; ?></h3>
           <hr class="hr">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p><?php echo $dashboard_description; ?></p>
         </div>
         <div class="col-md-4">
-          <a class="dash-menu-link" href="#">
+          <a class="dash-menu-link" href="https://www.facebook.com/City-of-Wakefield-Swim-Club-165472230515284/">
             <div class="card text-white facebook-group bg-facebook mb-3">
               <div class="card-header"><i class="fab fa-facebook-square fa-2x"></i></div>
               <div class="card-body">
-                <h5 class="card-title">Member Facebook Group</h5>
-                <p class="card-text">Click here to access our Member Facebook Group. Please request to join if you are not already a member. Our Facebook group is a great way to recieve member-related news.</p>
+                <h5 class="card-title">CoW Facebook Page</h5>
+                <p class="card-text">Click here to visit our Club Facebook Page, a great way to recieve member-related news.</p>
               </div>
             </div>
           </a>
