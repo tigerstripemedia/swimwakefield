@@ -39,7 +39,7 @@ get_header();
             <div class="card text-white facebook-group bg-facebook mb-3">
               <div class="card-header"><i class="fab fa-facebook-square fa-2x"></i></div>
               <div class="card-body">
-                <h5 class="card-title">CoW Facebook Page</h5>
+                <h5 class="card-title">City of Wakefield Swimming Club Facebook Page</h5>
                 <p class="card-text">Click here to visit our Club Facebook Page, a great way to recieve member-related news.</p>
               </div>
             </div>
