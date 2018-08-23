@@ -34,7 +34,7 @@ get_header();
           <tr>
             <th scope="col">Day</th>
             <th scope="col">Times</th>
-            <th scope="col">Pool</th>
+            <th scope="col">Venue</th>
           </tr>
         </thead>
         <tbody>
@@ -78,7 +78,7 @@ get_header();
           <tr>
             <th scope="col">Day</th>
             <th scope="col">Times</th>
-            <th scope="col">Pool</th>
+            <th scope="col">Venue</th>
           </tr>
         </thead>
         <tbody>
@@ -122,7 +122,7 @@ get_header();
           <tr>
             <th scope="col">Day</th>
             <th scope="col">Times</th>
-            <th scope="col">Pool</th>
+            <th scope="col">Venue</th>
           </tr>
         </thead>
         <tbody>
@@ -166,7 +166,7 @@ get_header();
           <tr>
             <th scope="col">Day</th>
             <th scope="col">Times</th>
-            <th scope="col">Pool</th>
+            <th scope="col">Venue</th>
           </tr>
         </thead>
         <tbody>
