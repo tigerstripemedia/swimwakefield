@@ -554,11 +554,22 @@ nav.tribe-events-nav-pagination {
 
 #welcome {
   text-align: center;
-  padding: 50px 0;
+  padding: 50px 0 25px 0;
 }
 
-.welcome-hr {
-  width: 80%;
+/* ==== NEWS ==== */
+
+#news {
+  text-align: center;
+  padding: 25px 0 50px 0;
+}
+
+.no-news {
+  padding: 25px 0;
+}
+
+.news-card {
+  margin: 15px 0;
 }
 
 /* ===== ENTRIES PAGE ===== */

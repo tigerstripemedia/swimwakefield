@@ -61,9 +61,51 @@ get_header();
       <div class="container">
         <h3><?php echo $mission_statement_title; ?></h3>
         <br>
-        <hr class="welcome-hr hr">
+        <hr class="hr">
         <br>
         <?php echo $mission_statement_body; ?>
+      </div>
+    </section>
+    
+    <section id="news">
+      <div class="container">
+        <h3>Club News</h3>
+        <br>
+        <hr class="hr">
+        <br>
+        
+        <?php 
+        $hasposts = get_posts('post_type=news'); 
+        if( !empty ( $hasposts ) ) : 
+        ?>
+              
+        <?php $loop = new WP_Query( array( 'post_type' => 'news', 'orderby' => 'post_id', 'order' => 'ASC', 'posts_per_page' => -1 ) ); ?>
+        
+        <?php while( $loop->have_posts() ) : $loop->the_post(); ?>
+          
+          <?php
+           $news_title  = get_field('news_title');
+           $news_date  = get_field('news_date');
+           $news_content  = get_field('news_content');
+           $news_important  = get_field('news_important');
+          ?>
+        
+        <div class="card news-card">
+          <div class="card-body">
+            <h5 class="card-title"><?php echo $news_title; ?><?php if ($news_important) : ?> <span class="badge badge-warning">Important!</span><?php endif; ?></h5>
+            <h6 class="card-subtitle mb-2 text-muted">Posted: <?php echo $news_date; ?></h6>
+            <?php echo $news_content; ?>
+          </div>
+        </div>
+        
+        <?php endwhile; ?>
+        
+        <?php else : ?>
+        
+        <h5 class="no-news text-muted">You're all caught up! There's no news to display.</h5>
+  
+        <?php endif; ?>
+        
       </div>
     </section>
     
