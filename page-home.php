@@ -93,7 +93,7 @@ get_header();
         <div class="card news-card">
           <div class="card-body">
             <h5 class="card-title"><?php echo $news_title; ?><?php if ($news_important) : ?> <span class="badge badge-warning">Important!</span><?php endif; ?></h5>
-            <h6 class="card-subtitle mb-2 text-muted">Posted: <?php echo $date('date'); ?></h6>
+            <h6 class="card-subtitle mb-2 text-muted">Posted: <?php echo $date; ?></h6>
             <?php echo $news_content; ?>
           </div>
         </div>
