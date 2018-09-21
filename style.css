@@ -570,6 +570,32 @@ nav.tribe-events-nav-pagination {
 
 .news-card {
   margin: 15px 0;
+  background: rgb(37,38,107);
+  background: -webkit-linear-gradient(329deg, rgba(37,38,107,1) 0%, rgba(45,103,205,1) 100%);
+  background: -moz-linear-gradient(329deg, rgba(37,38,107,1) 0%, rgba(45,103,205,1) 100%);
+  background: -o-linear-gradient(329deg, rgba(37,38,107,1) 0%, rgba(45,103,205,1) 100%);
+  background: linear-gradient(59deg, rgba(37,38,107,1) 0%, rgba(45,103,205,1) 100%);
+  color: #fff;
+}
+
+.news-card .card-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.news-hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.news-card a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: underline;
+}
+
+.news-card a:hover {
+    color: #fff;
 }
 
 /* ===== ENTRIES PAGE ===== */
