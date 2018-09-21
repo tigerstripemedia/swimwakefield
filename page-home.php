@@ -85,7 +85,7 @@ get_header();
           
           <?php
            $news_title  = get_field('news_title');
-           $news_date  = get_field('news_date');
+           $date  = get_field('date');
            $news_content  = get_field('news_content');
            $news_important  = get_field('news_important');
           ?>
@@ -93,7 +93,7 @@ get_header();
         <div class="card news-card">
           <div class="card-body">
             <h5 class="card-title"><?php echo $news_title; ?><?php if ($news_important) : ?> <span class="badge badge-warning">Important!</span><?php endif; ?></h5>
-            <h6 class="card-subtitle mb-2 text-muted">Posted: <?php echo $news_date; ?></h6>
+            <h6 class="card-subtitle mb-2 text-muted">Posted: <?php echo $date; ?></h6>
             <?php echo $news_content; ?>
           </div>
         </div>
