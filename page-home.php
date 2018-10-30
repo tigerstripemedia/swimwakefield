@@ -83,19 +83,35 @@ get_header();
         
         <?php while( $loop->have_posts() ) : $loop->the_post(); ?>
           
-          <?php
-           $news_title  = get_field('news_title');
-           $date  = get_field('date');
-           $news_content  = get_field('news_content');
-           $news_important  = get_field('news_important');
-          ?>
-        
+        <?php
+         $news_title      = get_field('news_title');
+         $date            = get_field('date');
+         $news_content    = get_field('news_content');
+         $news_important  = get_field('news_important');
+         $news_image      = get_field('news_image');
+        ?>
+      
         <div class="card news-card">
           <div class="card-body">
-            <h5 class="card-title"><?php echo $news_title; ?><?php if ($news_important) : ?> <span class="badge badge-warning">Important!</span><?php endif; ?></h5>
-            <h6 class="card-subtitle mb-2 mt-2">Posted: <?php echo get_the_date('jS F Y'); ?></h6>
-            <hr class="news-hr">
-            <?php echo $news_content; ?>
+            <?php if ($news_image) : ?>
+            <div class="row">
+              <div class="col-lg-6 col-md-12">
+            <?php endif; ?>
+                
+                <h5 class="card-title"><?php echo $news_title; ?><?php if ($news_important) : ?> <span class="badge badge-warning">Important!</span><?php endif; ?></h5>
+                <h6 class="card-subtitle mb-2 mt-2">Posted: <?php echo get_the_date('jS F Y'); ?></h6>
+                <hr class="news-hr">
+                <?php echo $news_content ?>
+                
+            <?php if ($news_image) : ?>
+              </div>
+              
+              <div class="col-lg-6 col-md-12">
+                <div class="news-img card-img-bottom" style="background: url('<?php echo $news_image; ?>') center no-repeat; background-size: cover;"></div>
+              </div>
+              
+            </div>
+            <?php endif; ?>
           </div>
         </div>
         

@@ -598,6 +598,12 @@ nav.tribe-events-nav-pagination {
     color: #fff;
 }
 
+.news-img.card-img-bottom {
+  color: #fff;
+  height: 20rem;
+  border-radius: .25rem;
+}
+
 /* ===== ENTRIES PAGE ===== */
 
 #events {
