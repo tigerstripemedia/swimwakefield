@@ -33,7 +33,7 @@ get_header();
             
             <p><?php echo $club_rankings_desc; ?></p>
             
-            <form>
+            <form id="club-rankings-form">
               <div class="form-group">
                 <label for="selectTimescale">Timescale</label>
                 <select class="form-control" id="selectTimescale">

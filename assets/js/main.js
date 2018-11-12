@@ -16,3 +16,7 @@ $(document).ready(function () {
     });
 
 });
+
+$(window).bind("pageshow", function() {
+  document.getElementById("club-rankings-form").reset();
+});
