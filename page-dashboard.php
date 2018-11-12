@@ -53,7 +53,7 @@ get_header();
     <div class="container">
       <div class="row">
   
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-4 col-md-6 offset-lg-2">
           <a class="dash-menu-link" href="/members">
             <div class="dash-menu-item bg-primary">
               <i class="fas fa-users fa-3x"></i>
@@ -63,7 +63,7 @@ get_header();
         </div>
         <!-- col -->
   
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-4 col-md-6">
           <a class="dash-menu-link" href="/club-shop">
             <div class="dash-menu-item bg-success">
             <i class="fas fa-shopping-cart fa-3x"></i>
@@ -73,7 +73,7 @@ get_header();
         </div>
         <!-- col -->
   
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-4 col-md-6">
           <a class="dash-menu-link" href="/member-contact">
             <div class="dash-menu-item bg-danger">
               <i class="fas fa-comment fa-3x"></i>
@@ -83,11 +83,21 @@ get_header();
         </div>
         <!-- col -->
   
-        <div class="col-lg-3 col-md-6">
-          <a class="dash-menu-link" href="member-info">
+        <div class="col-lg-4 col-md-6">
+          <a class="dash-menu-link" href="/member-info">
             <div class="dash-menu-item bg-warning">
               <i class="fas fa-info-circle fa-3x"></i>
               <h3>Member Info</h3>
+            </div>
+          </a>
+        </div>
+        <!-- col -->
+        
+        <div class="col-lg-4 col-md-6">
+          <a class="dash-menu-link" href="/club-rankings">
+            <div class="dash-menu-item bg-primary">
+              <i class="fas fa-list-ol fa-3x"></i>
+              <h3>Club Rankings</h3>
             </div>
           </a>
         </div>
