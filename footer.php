@@ -80,7 +80,7 @@
       </div>
     </div>
     <div class="copyright">
-      <small>&copy; <?php echo date('Y'); ?> City of Wakefield Swim Club | <a target="_blank" href="https://www.tigerstripemedia.com">Made with &#9825; by Tiger Stripe Media</a></small>
+      <small>&copy; <?php echo date('Y'); ?> City of Wakefield Swim Club | <a target="_blank" href="https://www.tigerstripemedia.com">Website made with &#9825; by Tiger Stripe Media</a></small>
     </div>
   </div>
 </footer>
